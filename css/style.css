@@ -1,0 +1,97 @@
+/* NORMALIZACION */
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+/*     font-family: 'Handlee', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif; 
+    color-principal: #fa573a
+    color-azul: #21242e;
+    */
+
+html {
+    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
+    width: 100%;
+    /* imagenes adaptarse al 100% de su contenedor */
+    height: auto;
+    display: block;
+    /* Que se comporte como bloque porque es un elemento en linea */
+}
+
+/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* INICIO HEADER */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
+
+}
+
+/*  */
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    text-decoration: none;
+    color: var(--colorprincipal);
+}
+
+header .nav-top a i {
+    font-size: 150%;
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+
+/* FIN HEADER */
+@media(min-width: 48.000em) {
+    header .nav-top a span {
+        display: inline;
+        /* span es un elemento en linea, no podemos convertilo en block */
+        font-size: 110%;
+
+    }
+
+    /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
+}
+
+
+/* MEDIAQUERY */
+
+
+
+/* FIN MEDIAQUERY */
