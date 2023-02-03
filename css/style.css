@@ -1,0 +1,181 @@
+/* NORMALIZACION */
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+/*     font-family: 'Handlee', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif; 
+    color-principal: #fa573a
+    color-azul: #21242e;
+    */
+
+html {
+    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
+    width: 100%;
+    /* imagenes adaptarse al 100% de su contenedor */
+    height: auto;
+    display: block;
+    /* Que se comporte como bloque porque es un elemento en linea */
+}
+
+/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* INICIO HEADER */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
+
+}
+
+/*  */
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    text-decoration: none;
+    color: var(--colorprincipal);
+}
+
+header .nav-top a i {
+    font-size: 150%;
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    padding: 1.250em;
+}
+
+header .hamburguesa {
+    width: 1.875em;
+    cursor: pointer;
+    /* Que tenga la manita cuando nos ponemos encima */
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* se reparten el espacio uno a la izquierda y otro a la derecha */
+    /* hasta que les definamos medida se reparten el espacio */
+}
+
+header nav .menu {
+    width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
+    padding-top: 1.25em;
+}
+
+header .logo {
+    max-width: 100px;
+}
+
+header .menu a {
+    display: block;
+    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
+    text-align: center;
+    padding: 1.25em;
+    text-decoration: none;
+    /* eliminamos el subrayado */
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    transition: 0.5s;
+}
+
+header .menu a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
+    color: var(--colorprincipal);
+    transition: 0.5s;
+}
+
+header .menu li:last-child a {
+    border-bottom: none;
+}
+
+header .menu .activo {
+    color: var(--colorprincipal);
+}
+
+
+
+/* FIN HEADER */
+
+
+
+/* MEDIAQUERY */
+@media(min-width: 48.000em) {
+    header .nav-top a span {
+        display: inline;
+        /* span es un elemento en linea, no podemos convertilo en block */
+        font-size: 110%;
+    }
+
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+
+    /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
+}
+
+@media(min-width: 62.750em) {
+    header .hamburguesa {
+        display: none;
+    }
+
+    header nav .menu {
+        padding-top: 0;
+        width: auto;
+        /* Que elija segun el tamaño del elemento ys e adapte al dispositivo que lo contiene */
+    }
+
+    header nav .menu li {
+        display: inline-block;
+    }
+
+    header .menu a {
+        border-bottom: none;
+        padding: 0.5em 0.5em 0.75em;
+    }
+}
+
+
+/* FIN MEDIAQUERY */
