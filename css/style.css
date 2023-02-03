@@ -136,9 +136,45 @@ header .menu .activo {
 }
 
 
-
 /* FIN HEADER */
 
+
+
+/* INCIO FOOTER */
+
+footer {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
+    text-align: center;
+    color: white;
+    position: fixed;
+    /* Ponemos posicion fija, pierde la referencia de lo que teniamos arriba, porque cambiamos de capa, hay que ponerle un width para que se adapte al contenedor */
+    bottom: 0;
+    /* fijada la posicion, fijamos que se quede siempre abajo */
+    width: 100%;
+    /* Al cambiar de capa pierde la referencia del contenedor, hay que añadirle el width para que se adapte al contenedor */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--colorprincipal);
+}
+
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    font-size: 250%;
+}
+
+
+/* FINAL FOOTER */
 
 
 /* MEDIAQUERY */
@@ -154,6 +190,10 @@ header .menu .activo {
     }
 
     /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
+
+    footer {
+        text-align: left;
+    }
 }
 
 @media(min-width: 62.750em) {
