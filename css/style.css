@@ -76,22 +76,106 @@ header .nav-top a span {
     display: none;
 }
 
+header nav {
+    padding: 1.250em;
+}
+
+header .hamburguesa {
+    width: 1.875em;
+    cursor: pointer;
+    /* Que tenga la manita cuando nos ponemos encima */
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* se reparten el espacio uno a la izquierda y otro a la derecha */
+    /* hasta que les definamos medida se reparten el espacio */
+}
+
+header nav .menu {
+    width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
+    padding-top: 1.25em;
+}
+
+header .logo {
+    max-width: 100px;
+}
+
+header .menu a {
+    display: block;
+    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
+    text-align: center;
+    padding: 1.25em;
+    text-decoration: none;
+    /* eliminamos el subrayado */
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    transition: 0.5s;
+}
+
+header .menu a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
+    color: var(--colorprincipal);
+    transition: 0.5s;
+}
+
+header .menu li:last-child a {
+    border-bottom: none;
+}
+
+header .menu .activo {
+    color: var(--colorprincipal);
+}
+
+
 
 /* FIN HEADER */
+
+
+
+/* MEDIAQUERY */
 @media(min-width: 48.000em) {
     header .nav-top a span {
         display: inline;
         /* span es un elemento en linea, no podemos convertilo en block */
         font-size: 110%;
+    }
 
+    header .nav-top .container {
+        justify-content: space-between;
     }
 
     /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
 }
 
+@media(min-width: 62.750em) {
+    header .hamburguesa {
+        display: none;
+    }
 
-/* MEDIAQUERY */
+    header nav .menu {
+        padding-top: 0;
+        width: auto;
+        /* Que elija segun el tamaño del elemento ys e adapte al dispositivo que lo contiene */
+    }
 
+    header nav .menu li {
+        display: inline-block;
+    }
+
+    header .menu a {
+        border-bottom: none;
+        padding: 0.5em 0.5em 0.75em;
+    }
+}
 
 
 /* FIN MEDIAQUERY */
