@@ -220,6 +220,96 @@ header .menu .activo {
 
 /* FIN HERO */
 
+/* INICIO OURSERVICE */
+
+main section {
+    padding: 2.188em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    /* El contenedor siempre en posicion relativa */
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    margin-bottom: var(--margingrid);
+}
+
+main section .underline hr {
+    border-color: var(--colorprincipal);
+    /* La linea al ser un hr se cambia de color con BORDER COLOR */
+    position: absolute;
+    /* La x cambia de capa y sube hacia arriba, hay que darle un width para que tenga una medida */
+    width: 100%;
+    top: -1px;
+}
+
+main section .underline span {
+    text-align: center;
+    /* para alinear al centro */
+    display: block;
+    /* le damos este display para que funcione */
+}
+
+
+main #ourservices .grid {
+    display: grid;
+    grid-column: 1fr;
+    gap: var(--margingrid);
+}
+
+main #ourservices article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main #ourservices article i:not(.fa-long-arrow-alt-right) {
+    /* pseudoselector not elegimos al i que no queremos atacar */
+    color: var(--colorprincipal);
+    font-size: 140%;
+    border: 1px solid var(--colorprincipal);
+    display: inline-block;
+    /* es un elemento en linea, le ponemos display block para ponerle padding*/
+    padding: 0.5em;
+}
+
+main #ourservices h3 {
+    font-weight: 700;
+    /* para ponerlo en negrita */
+    margin: 10px 0;
+    font-size: 110%;
+}
+
+main #ourservices p {
+    color: #777;
+    line-height: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+/* FIN OURSERVICE */
+
 /* INCIO FOOTER */
 
 footer {
@@ -256,8 +346,26 @@ footer a:hover {
 
 /* FINAL FOOTER */
 
+/* MEDIAQUERY 600PX */
 
-/* MEDIAQUERY */
+@media(min-width:37.50em) {
+    main #ourservices .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main #ourservices article:nth-last-child {
+        grid-column: 1/3;
+    }
+
+    main #ourservices article {
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 1.5em;
+    }
+}
+
+
+/* MEDIAQUERY 768PX*/
 @media(min-width: 48.000em) {
     header .nav-top a span {
         display: inline;
@@ -274,8 +382,18 @@ footer a:hover {
     footer {
         text-align: left;
     }
+
+    main #ourservices .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main #ourservices article:last-child {
+        grid-column: 3/4;
+    }
 }
 
+
+/* MEDIAQUERY 1004 PX */
 @media(min-width: 62.750em) {
     header .hamburguesa {
         display: none;
