@@ -310,6 +310,52 @@ main #ourservices p {
 
 /* FIN OURSERVICE */
 
+
+/* INICIO ABOUT US */
+
+main #aboutus .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+main #aboutus h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main #aboutus h4 {
+    color: var(--colorprincipal);
+    margin: 1em 0;
+}
+
+main section p {
+    color: #777;
+    line-height: 1.25em;
+}
+
+main #aboutus .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    width: 95%;
+    /* reducimos el tamaño */
+    margin: 0 auto;
+    transition: 1s;
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus figure:hover :is(.marco, img) {
+    transform: rotateZ(0deg);
+}
+
+
+/* FIN ABOUT US */
+
+
+
 /* INCIO FOOTER */
 
 footer {
@@ -361,6 +407,12 @@ footer a:hover {
         border-bottom: none;
         border-left: 1px solid #aaa;
         padding: 1.5em;
+    }
+
+    main #about .flex {
+        flex-direction: row;
+        /* Para que se vea en dos columnas cuando se vea en dispositivo de 600px */
+
     }
 }
 
