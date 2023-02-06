@@ -138,7 +138,87 @@ header .menu .activo {
 
 /* FIN HEADER */
 
+/* INICIO HERO */
+.hero {
+    background-image: url(../assets/images/fondo.jpg);
+    /* Podemos ponerle padding para generar mayor distancia, tanto arriba y abajo como a la derecha, o podemos ponerle un height */
+    height: 60vh;
+    /* la imagen esta mas oscurecida, se hace con BACKGROUND BLEND */
+    background-color: #777;
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    /* Que la imagen se adapte al espacio que lo contiene */
+    color: white;
+    /* padding: 200px 0px 200px 30px;  El problema de esto es que la medida siempre es fija; los % en los padding son dificiles de manejar. La mejor solucion es ponerle una altura en vh*/
+    height: 60vh;
+}
 
+.hero .container {
+    width: 90%;
+    /* Para que quede alineado */
+    display: flex;
+    /* Como todo se pone en linea se arregla con flex direction */
+    flex-direction: column;
+    /* Para que siga en columnas */
+    justify-content: center;
+    /* Al centro en la vertical */
+    height: 100%;
+    /* Le ponemos el 100% de la altura del hero */
+}
+
+.hero h1 {
+    font-family: var(--fuentetitulos);
+    font-size: 2.25em;
+    /* padding podriamos poner si el fondo es transparente, en este caso lo es */
+}
+
+.hero h2 {
+    color: var(--colorprincipal);
+    font-size: 1.25em;
+    margin: var(--margingrid) 0;
+}
+
+.hero p {
+    font-size: 1.15em;
+}
+
+/* Voy a volver a utilizar boton, porque hay otro más abajo, no pondremos .hero .boton, sino que generalizaremos */
+
+.boton {
+    display: inline-block;
+    background-color: var(--colorprincipal);
+    padding: 1.15em;
+    /* Ahora es un elemento en bloque y podemos ponerle padding */
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--colorprincipal);
+    /* Como el borde es del mismo color no se va a ver y quedara cuando hagamos el hover */
+    margin: var(--margingrid) 0;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--colorprincipal);
+}
+
+.boton:hover i {
+    transition: transform 0.5s;
+    transform: translateX(5px) scale(1.15);
+}
+
+.hero .social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    font-size: 2em;
+}
+
+/* FIN HERO */
 
 /* INCIO FOOTER */
 
