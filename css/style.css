@@ -328,7 +328,7 @@ main #aboutus h4 {
     margin: 1em 0;
 }
 
-main section p {
+main #aboutus p {
     color: #777;
     line-height: 1.25em;
 }
@@ -353,6 +353,95 @@ main #aboutus figure:hover :is(.marco, img) {
 
 
 /* FIN ABOUT US */
+
+/* INICIO OUR BLOG */
+
+main #ourblog h3 {
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 110%;
+}
+
+main #ourblog h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main #ourblog h4 {
+    color: var(--colorprincipal);
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+main section p.lorem {
+    color: #777;
+    line-height: 1.25em;
+    margin: 1em 0;
+}
+
+main #ourblog article {
+    padding: 1.5em 0;
+}
+
+#ourblog h1 {
+    color: black;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+#ourblog h1 span {
+    color: var(--colorprincipal);
+}
+
+.flex figure {
+    position: relative;
+}
+
+main #ourblog .fecha {
+    font-weight: 700;
+    line-height: 1.25em;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.fecha {
+    color: white;
+}
+
+
+main #ourblog .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margingrid);
+}
+
+main #ourblog article {
+    width: calc(50% - var(--margingrid));
+}
+
+
+.flex div.fecha {
+    background-color: var(--colorprincipal);
+    background-blend-mode: lighten;
+}
+
+.enlace {
+    padding-bottom: 100px;
+}
+
+
+
+/* FIN OUR BLOG */
+
+
+
 
 
 
@@ -442,6 +531,11 @@ footer a:hover {
     main #ourservices article:last-child {
         grid-column: 3/4;
     }
+
+    main #ourblog article {
+        width: calc(33.333% - var(--margingrid));
+    }
+
 }
 
 
