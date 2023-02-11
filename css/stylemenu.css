@@ -1,0 +1,402 @@
+/* NORMALIZACION */
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+/*     font-family: 'Handlee', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif; 
+    color-principal: #fa573a
+    color-azul: #21242e;
+    */
+
+html {
+    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuenteprincipal: 'Montserrat', sans-serif;
+    --fuentetitulos: 'Handlee', cursive;
+    --colorprincipal: #fa573a;
+    --colorsecundario: #21242e;
+    --margingrid: 1em;
+    --fontsize: 1em;
+    --anchomaximo: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
+    width: 100%;
+    /* imagenes adaptarse al 100% de su contenedor */
+    height: auto;
+    display: block;
+    /* Que se comporte como bloque porque es un elemento en linea */
+}
+
+/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
+
+.container {
+    max-width: var(--anchomaximo);
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--fuenteprincipal);
+    font-size: var(--fontsize);
+}
+
+/* INICIO HEADER */
+
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
+
+}
+
+/*  */
+header .nav-top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav-top a {
+    text-decoration: none;
+    color: var(--colorprincipal);
+}
+
+header .nav-top a i {
+    font-size: 150%;
+}
+
+header .nav-top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    padding: 1.250em;
+}
+
+header .hamburguesa {
+    width: 1.875em;
+    cursor: pointer;
+    /* Que tenga la manita cuando nos ponemos encima */
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: 0.625em;
+}
+
+header nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* se reparten el espacio uno a la izquierda y otro a la derecha */
+    /* hasta que les definamos medida se reparten el espacio */
+}
+
+header nav .menu {
+    width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
+    padding-top: 1.25em;
+}
+
+header .logo {
+    max-width: 100px;
+}
+
+header .menu a {
+    display: block;
+    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
+    text-align: center;
+    padding: 1.25em;
+    text-decoration: none;
+    /* eliminamos el subrayado */
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+    transition: 0.5s;
+}
+
+header .menu a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
+    color: var(--colorprincipal);
+    transition: 0.5s;
+}
+
+header .menu li:last-child a {
+    border-bottom: none;
+}
+
+header .menu .activo {
+    color: var(--colorprincipal);
+}
+
+
+/* FIN HEADER */
+
+
+/* INICIO MENU */
+
+.nodisplay {
+    display: none;
+}
+
+body#top {
+    background-color: var(--colorsecundario);
+}
+
+main section {
+    padding: 2.188em 1.5em;
+}
+
+main section h2 {
+    color: white;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    /* El contenedor siempre en posicion relativa */
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    margin-bottom: var(--margingrid);
+}
+
+main section .underline hr {
+    border-color: var(--colorprincipal);
+    /* La linea al ser un hr se cambia de color con BORDER COLOR */
+    position: absolute;
+    /* La x cambia de capa y sube hacia arriba, hay que darle un width para que tenga una medida */
+    width: 100%;
+    top: -1px;
+}
+
+main section .underline span {
+    text-align: center;
+    /* para alinear al centro */
+    display: block;
+    /* le damos este display para que funcione */
+}
+
+main section .left {
+    color: var(--colorprincipal);
+    font-weight: 700;
+    margin-bottom: var(--margingrid);
+}
+
+main section .left hr {
+    border-color: var(--colorprincipal);
+    /* La linea al ser un hr se cambia de color con BORDER COLOR */
+    margin: 0 0;
+    /* La x cambia de capa y sube hacia arriba, hay que darle un width para que tenga una medida */
+    width: 25%;
+}
+
+main section p {
+    color: white;
+    line-height: 1.25em;
+    margin: 1em 0;
+}
+
+
+/* Menu */
+
+main nav .menu2 {
+    width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
+    padding-top: 1.25em;
+}
+
+main .menu2 a {
+    display: block;
+    text-align: left;
+    padding: 1.25em;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+main .menu2 a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
+    background-color: var(--colorprincipal);
+    transition: 0.5s;
+}
+
+main .menu2 .activo {
+    background-color: var(--colorprincipal);
+}
+
+main h3 {
+    font-weight: 700;
+    /* para ponerlo en negrita */
+    margin: 1em 0;
+    font-size: 110%;
+    color: white;
+}
+
+main p {
+    color: white;
+    line-height: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+main h4 {
+    color: white;
+    font-weight: 700;
+    font-size: 110%;
+    margin: 1em 0;
+}
+
+main section h4 span {
+    color: var(--colorprincipal);
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+main article {
+    margin-bottom: 1.25em;
+}
+
+main article:last-child {
+    margin-bottom: 3em;
+}
+
+/* FIN MENU */
+
+
+
+
+
+
+
+
+
+
+
+
+/* INCIO FOOTER */
+
+footer {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
+    text-align: center;
+    color: white;
+    position: fixed;
+    /* Ponemos posicion fija, pierde la referencia de lo que teniamos arriba, porque cambiamos de capa, hay que ponerle un width para que se adapte al contenedor */
+    bottom: 0;
+    /* fijada la posicion, fijamos que se quede siempre abajo */
+    width: 100%;
+    /* Al cambiar de capa pierde la referencia del contenedor, hay que añadirle el width para que se adapte al contenedor */
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--colorprincipal);
+}
+
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    font-size: 250%;
+}
+
+
+/* FINAL FOOTER */
+
+
+
+/* MEDIAQUERY 600PX */
+
+@media(min-width:37.50em) {
+    main #ourservices .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main #ourservices article:nth-last-child {
+        grid-column: 1/3;
+    }
+
+    main #ourservices article {
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 1.5em;
+    }
+
+    main #about .flex {
+        flex-direction: row;
+        /* Para que se vea en dos columnas cuando se vea en dispositivo de 600px */
+
+    }
+}
+
+
+/* MEDIAQUERY 768PX*/
+@media(min-width: 48.000em) {
+    header .nav-top a span {
+        display: inline;
+        /* span es un elemento en linea, no podemos convertilo en block */
+        font-size: 110%;
+    }
+
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+
+    /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
+
+    footer {
+        text-align: left;
+    }
+
+
+
+}
+
+
+/* MEDIAQUERY 1004 PX */
+@media(min-width: 62.750em) {
+    header .hamburguesa {
+        display: none;
+    }
+
+    header nav .menu {
+        padding-top: 0;
+        width: auto;
+        /* Que elija segun el tamaño del elemento ys e adapte al dispositivo que lo contiene */
+    }
+
+    header nav .menu li {
+        display: inline-block;
+    }
+
+    header .menu a {
+        border-bottom: none;
+        padding: 0.5em 0.5em 0.75em;
+    }
+}
+
+
+/* FIN MEDIAQUERY */
