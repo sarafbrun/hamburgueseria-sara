@@ -580,41 +580,45 @@ footer a:hover {
 
     /* MENU */
 
-    .columnas {
-        display: flex;
-        gap: 30px;
+    main nav .menu2 {
+        padding-top: 1.9em;
     }
 
-    main nav .menu2 {
-        padding-top: 1.25em;
+    .columnas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
     }
 
     .columna1 {
-        width: 600px;
+        width: calc(40% - 50px);
     }
 
-    .columna1 article {
-        margin-top: 20px;
-    }
-
-    .columna2 figure>img {
-        width: 200px;
-        padding-right: 10px;
+    .columna2 {
+        width: calc(60% - 50px);
+        align-items: center;
+        justify-content: center;
     }
 
     .columna2 article {
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
     }
 
-    .columna2 article>div {
+    .columna2 article figure {
+        width: calc(30% - 10px);
+        margin-right: 10px;
+    }
+
+    .columna2 .chicken {
+        width: calc(70% - 10px);
         margin-top: 20px;
     }
 
-    .columna2 article {
-        width: 100%;
-        height: auto;
+    .columna2 figure {
+        margin-bottom: 10px;
     }
+
 
 
 }
