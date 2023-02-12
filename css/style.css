@@ -579,47 +579,33 @@ footer a:hover {
         flex-direction: row;
         /* Para que se vea en dos columnas cuando se vea en dispositivo de 600px */
     }
+}
 
-    /* MENU */
+/* MENU */
 
-    .columnas {
-        display: flex;
-        gap: 30px;
-    }
-
-
-    main nav .menu2 {
-        padding-top: 1.25em;
-    }
-
-    .columna1 {
-        width: 600px;
-    }
-
-    .columna2 figure>img {
-        width: 200px;
-        padding-right: 10px;
-    }
-
-    .columna2 article {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .columna2 article>div {
-        margin-top: 20px;
-    }
-
-    .columna1 article {
-        margin-top: 20px;
-    }
-
-    .columna1 .menu2 {
-        margin-top: 10px;
-    }
+.columnas {
+    display: flex;
+    gap: 50px;
 
 }
 
+
+main nav .menu2 {
+    padding-top: 1.25em;
+}
+
+.columna1 {
+    width: 600px;
+}
+
+.columna2 {
+    display: block;
+}
+
+.columna2 article {
+    width: 100%;
+    height: auto;
+}
 
 
 /* MEDIAQUERY 768PX*/
