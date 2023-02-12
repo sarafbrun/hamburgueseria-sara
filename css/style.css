@@ -463,6 +463,8 @@ h2.blanco {
 }
 
 
+
+
 .mainmenu h3 {
     color: white;
     font-weight: 700;
@@ -492,7 +494,6 @@ main #menu p {
 
 main nav .menu2 {
     width: 100%;
-    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
     padding-top: 1.25em;
 }
 
@@ -506,7 +507,6 @@ main .menu2 a {
 }
 
 main .menu2 a:hover {
-    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
     background-color: var(--colorprincipal);
     transition: 0.5s;
 }
@@ -515,9 +515,7 @@ main .menu2 .activo {
     background-color: var(--colorprincipal);
 }
 
-
-
-
+/* FIN DEL MENU */
 
 
 
@@ -579,32 +577,46 @@ footer a:hover {
         flex-direction: row;
         /* Para que se vea en dos columnas cuando se vea en dispositivo de 600px */
     }
-}
 
-/* MENU */
+    /* MENU */
 
-.columnas {
-    display: flex;
-    gap: 50px;
+    .columnas {
+        display: flex;
+        gap: 30px;
+    }
 
-}
+    main nav .menu2 {
+        padding-top: 1.25em;
+    }
+
+    .columna1 {
+        width: 600px;
+    }
+
+    .columna1 article {
+        margin-top: 20px;
+    }
+
+    .columna2 figure>img {
+        width: 200px;
+        padding-right: 10px;
+    }
+
+    .columna2 article {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .columna2 article>div {
+        margin-top: 20px;
+    }
+
+    .columna2 article {
+        width: 100%;
+        height: auto;
+    }
 
 
-main nav .menu2 {
-    padding-top: 1.25em;
-}
-
-.columna1 {
-    width: 600px;
-}
-
-.columna2 {
-    display: block;
-}
-
-.columna2 article {
-    width: 100%;
-    height: auto;
 }
 
 
